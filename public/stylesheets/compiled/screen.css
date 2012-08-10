@@ -1,0 +1,2038 @@
+@import url(javascripts/lib/cssreset/reset.css);
+/* Pioneers - web game based on the Settlers of Catan board game.
+ *
+ * Copyright (C) 2009 Jakub Kuźma <qoobaa@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/>. */
+/*@import compass/utilities.sass */
+/*@import message_block.sass */
+/* Pioneers - web game based on the Settlers of Catan board game.
+ *
+ * Copyright (C) 2009 Jakub Kuźma <qoobaa@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-1 {
+  height: 80px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-2 {
+  height: 80px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-3 {
+  height: 80px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-4 {
+  height: 80px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-5 {
+  height: 80px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-6 {
+  height: 80px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-7 {
+  height: 80px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-8 {
+  height: 80px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-9 {
+  height: 80px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-1-10 {
+  height: 80px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-1 {
+  height: 200px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-2 {
+  height: 200px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-3 {
+  height: 200px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-4 {
+  height: 200px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-5 {
+  height: 200px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-6 {
+  height: 200px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-7 {
+  height: 200px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-8 {
+  height: 200px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-9 {
+  height: 200px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-2-10 {
+  height: 200px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-1 {
+  height: 320px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-2 {
+  height: 320px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-3 {
+  height: 320px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-4 {
+  height: 320px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-5 {
+  height: 320px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-6 {
+  height: 320px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-7 {
+  height: 320px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-8 {
+  height: 320px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-9 {
+  height: 320px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-3-10 {
+  height: 320px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-1 {
+  height: 440px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-2 {
+  height: 440px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-3 {
+  height: 440px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-4 {
+  height: 440px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-5 {
+  height: 440px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-6 {
+  height: 440px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-7 {
+  height: 440px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-8 {
+  height: 440px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-9 {
+  height: 440px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-4-10 {
+  height: 440px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-1 {
+  height: 560px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-2 {
+  height: 560px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-3 {
+  height: 560px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-4 {
+  height: 560px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-5 {
+  height: 560px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-6 {
+  height: 560px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-7 {
+  height: 560px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-8 {
+  height: 560px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-9 {
+  height: 560px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-5-10 {
+  height: 560px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-1 {
+  height: 680px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-2 {
+  height: 680px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-3 {
+  height: 680px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-4 {
+  height: 680px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-5 {
+  height: 680px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-6 {
+  height: 680px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-7 {
+  height: 680px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-8 {
+  height: 680px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-9 {
+  height: 680px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-6-10 {
+  height: 680px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-1 {
+  height: 800px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-2 {
+  height: 800px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-3 {
+  height: 800px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-4 {
+  height: 800px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-5 {
+  height: 800px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-6 {
+  height: 800px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-7 {
+  height: 800px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-8 {
+  height: 800px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-9 {
+  height: 800px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-7-10 {
+  height: 800px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-1 {
+  height: 920px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-2 {
+  height: 920px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-3 {
+  height: 920px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-4 {
+  height: 920px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-5 {
+  height: 920px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-6 {
+  height: 920px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-7 {
+  height: 920px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-8 {
+  height: 920px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-9 {
+  height: 920px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-8-10 {
+  height: 920px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-1 {
+  height: 1040px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-2 {
+  height: 1040px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-3 {
+  height: 1040px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-4 {
+  height: 1040px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-5 {
+  height: 1040px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-6 {
+  height: 1040px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-7 {
+  height: 1040px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-8 {
+  height: 1040px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-9 {
+  height: 1040px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-9-10 {
+  height: 1040px;
+  width: 725px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-1 {
+  height: 1160px;
+  width: 95px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-2 {
+  height: 1160px;
+  width: 165px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-3 {
+  height: 1160px;
+  width: 235px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-4 {
+  height: 1160px;
+  width: 305px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-5 {
+  height: 1160px;
+  width: 375px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-6 {
+  height: 1160px;
+  width: 445px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-7 {
+  height: 1160px;
+  width: 515px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-8 {
+  height: 1160px;
+  width: 585px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-9 {
+  height: 1160px;
+  width: 655px;
+}
+
+/* line 40, ../../../app/stylesheets/_board.sass */
+.yui-board-board-size-10-10 {
+  height: 1160px;
+  width: 725px;
+}
+
+/* line 44, ../../../app/stylesheets/_board.sass */
+.yui-board-content {
+  background: url('/images/board-background.png?1344557890');
+  padding: 50px;
+  position: relative;
+}
+
+/* line 49, ../../../app/stylesheets/_board.sass */
+.yui-board-hex {
+  width: 95px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  position: absolute;
+}
+
+/* line 56, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-forest {
+  background: url('/images/forest.png?1344557890');
+}
+
+/* line 58, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-hill {
+  background: url('/images/hill.png?1344557890');
+}
+
+/* line 60, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-mountain {
+  background: url('/images/mountain.png?1344557890');
+}
+
+/* line 62, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-pasture {
+  background: url('/images/pasture.png?1344557890');
+}
+
+/* line 64, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-field {
+  background: url('/images/field.png?1344557890');
+}
+
+/* line 66, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-sea {
+  background: url('/images/sea.png?1344557890');
+}
+
+/* line 68, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-desert {
+  background: url('/images/desert.png?1344557890');
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-0 {
+  position: absolute;
+  top: 0px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-1 {
+  position: absolute;
+  top: 80px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-2 {
+  position: absolute;
+  top: 160px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-3 {
+  position: absolute;
+  top: 240px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-4 {
+  position: absolute;
+  top: 320px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-5 {
+  position: absolute;
+  top: 400px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-6 {
+  position: absolute;
+  top: 480px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-7 {
+  position: absolute;
+  top: 560px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-8 {
+  position: absolute;
+  top: 640px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-9 {
+  position: absolute;
+  top: 720px;
+}
+
+/* line 72, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-row-10 {
+  position: absolute;
+  top: 800px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-0 {
+  top: 0px;
+  left: 0px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-1 {
+  top: 40px;
+  left: 70px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-2 {
+  top: 80px;
+  left: 140px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-3 {
+  top: 120px;
+  left: 210px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-4 {
+  top: 160px;
+  left: 280px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-5 {
+  top: 200px;
+  left: 350px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-6 {
+  top: 240px;
+  left: 420px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-7 {
+  top: 280px;
+  left: 490px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-8 {
+  top: 320px;
+  left: 560px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-9 {
+  top: 360px;
+  left: 630px;
+}
+
+/* line 77, ../../../app/stylesheets/_board.sass */
+.yui-board-hexes-col-10 {
+  top: 400px;
+  left: 700px;
+}
+
+/* line 81, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-harbor, .yui-board-hex-robber, .yui-board-hex-roll {
+  width: 95px;
+  height: 80px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+/* line 88, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-harbor, .yui-board-hex-roll {
+  display: block;
+}
+
+/* line 91, ../../../app/stylesheets/_board.sass */
+.yui-board-hex-robber {
+  display: none;
+}
+
+/* line 95, ../../../app/stylesheets/_board.sass */
+.yui-board-robber .yui-board-hex-roll {
+  display: none;
+}
+/* line 97, ../../../app/stylesheets/_board.sass */
+.yui-board-robber .yui-board-hex-robber {
+  display: block;
+}
+
+/* line 101, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-generic-0 {
+  background: url('/images/harbor-generic-0.png?1344557890');
+}
+
+/* line 101, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-generic-1 {
+  background: url('/images/harbor-generic-1.png?1344557890');
+}
+
+/* line 101, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-generic-2 {
+  background: url('/images/harbor-generic-2.png?1344557890');
+}
+
+/* line 101, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-generic-3 {
+  background: url('/images/harbor-generic-3.png?1344557890');
+}
+
+/* line 101, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-generic-4 {
+  background: url('/images/harbor-generic-4.png?1344557890');
+}
+
+/* line 101, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-generic-5 {
+  background: url('/images/harbor-generic-5.png?1344557890');
+}
+
+/* line 104, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-bricks-0 {
+  background: url('/images/harbor-generic-0.png?1344557890');
+}
+
+/* line 104, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-bricks-1 {
+  background: url('/images/harbor-generic-1.png?1344557890');
+}
+
+/* line 104, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-bricks-2 {
+  background: url('/images/harbor-generic-2.png?1344557890');
+}
+
+/* line 104, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-bricks-3 {
+  background: url('/images/harbor-generic-3.png?1344557890');
+}
+
+/* line 104, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-bricks-4 {
+  background: url('/images/harbor-generic-4.png?1344557890');
+}
+
+/* line 104, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-bricks-5 {
+  background: url('/images/harbor-generic-5.png?1344557890');
+}
+
+/* line 107, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-grain-0 {
+  background: url('/images/harbor-generic-0.png?1344557890');
+}
+
+/* line 107, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-grain-1 {
+  background: url('/images/harbor-generic-1.png?1344557890');
+}
+
+/* line 107, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-grain-2 {
+  background: url('/images/harbor-generic-2.png?1344557890');
+}
+
+/* line 107, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-grain-3 {
+  background: url('/images/harbor-generic-3.png?1344557890');
+}
+
+/* line 107, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-grain-4 {
+  background: url('/images/harbor-generic-4.png?1344557890');
+}
+
+/* line 107, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-grain-5 {
+  background: url('/images/harbor-generic-5.png?1344557890');
+}
+
+/* line 110, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-lumber-0 {
+  background: url('/images/harbor-generic-0.png?1344557890');
+}
+
+/* line 110, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-lumber-1 {
+  background: url('/images/harbor-generic-1.png?1344557890');
+}
+
+/* line 110, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-lumber-2 {
+  background: url('/images/harbor-generic-2.png?1344557890');
+}
+
+/* line 110, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-lumber-3 {
+  background: url('/images/harbor-generic-3.png?1344557890');
+}
+
+/* line 110, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-lumber-4 {
+  background: url('/images/harbor-generic-4.png?1344557890');
+}
+
+/* line 110, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-lumber-5 {
+  background: url('/images/harbor-generic-5.png?1344557890');
+}
+
+/* line 113, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-ore-0 {
+  background: url('/images/harbor-generic-0.png?1344557890');
+}
+
+/* line 113, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-ore-1 {
+  background: url('/images/harbor-generic-1.png?1344557890');
+}
+
+/* line 113, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-ore-2 {
+  background: url('/images/harbor-generic-2.png?1344557890');
+}
+
+/* line 113, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-ore-3 {
+  background: url('/images/harbor-generic-3.png?1344557890');
+}
+
+/* line 113, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-ore-4 {
+  background: url('/images/harbor-generic-4.png?1344557890');
+}
+
+/* line 113, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-ore-5 {
+  background: url('/images/harbor-generic-5.png?1344557890');
+}
+
+/* line 116, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-wool-0 {
+  background: url('/images/harbor-generic-0.png?1344557890');
+}
+
+/* line 116, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-wool-1 {
+  background: url('/images/harbor-generic-1.png?1344557890');
+}
+
+/* line 116, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-wool-2 {
+  background: url('/images/harbor-generic-2.png?1344557890');
+}
+
+/* line 116, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-wool-3 {
+  background: url('/images/harbor-generic-3.png?1344557890');
+}
+
+/* line 116, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-wool-4 {
+  background: url('/images/harbor-generic-4.png?1344557890');
+}
+
+/* line 116, ../../../app/stylesheets/_board.sass */
+.yui-board-harbor-wool-5 {
+  background: url('/images/harbor-generic-5.png?1344557890');
+}
+
+/* line 119, ../../../app/stylesheets/_board.sass */
+.yui-board-node {
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+  position: absolute;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-0 {
+  position: absolute;
+  top: 0px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-1 {
+  position: absolute;
+  top: 80px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-2 {
+  position: absolute;
+  top: 160px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-3 {
+  position: absolute;
+  top: 240px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-4 {
+  position: absolute;
+  top: 320px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-5 {
+  position: absolute;
+  top: 400px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-6 {
+  position: absolute;
+  top: 480px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-7 {
+  position: absolute;
+  top: 560px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-8 {
+  position: absolute;
+  top: 640px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-9 {
+  position: absolute;
+  top: 720px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-10 {
+  position: absolute;
+  top: 800px;
+}
+
+/* line 126, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-row-11 {
+  position: absolute;
+  top: 880px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-0 {
+  top: -52px;
+  left: -12px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-1 {
+  top: -12px;
+  left: 13px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-2 {
+  top: -12px;
+  left: 58px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-3 {
+  top: 28px;
+  left: 83px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-4 {
+  top: 28px;
+  left: 128px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-5 {
+  top: 68px;
+  left: 153px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-6 {
+  top: 68px;
+  left: 198px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-7 {
+  top: 108px;
+  left: 223px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-8 {
+  top: 108px;
+  left: 268px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-9 {
+  top: 148px;
+  left: 293px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-10 {
+  top: 148px;
+  left: 338px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-11 {
+  top: 188px;
+  left: 363px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-12 {
+  top: 188px;
+  left: 408px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-13 {
+  top: 228px;
+  left: 433px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-14 {
+  top: 228px;
+  left: 478px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-15 {
+  top: 268px;
+  left: 503px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-16 {
+  top: 268px;
+  left: 548px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-17 {
+  top: 308px;
+  left: 573px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-18 {
+  top: 308px;
+  left: 618px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-19 {
+  top: 348px;
+  left: 643px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-20 {
+  top: 348px;
+  left: 688px;
+}
+
+/* line 131, ../../../app/stylesheets/_board.sass */
+.yui-board-nodes-col-21 {
+  top: 388px;
+  left: 713px;
+}
+
+/* line 138, ../../../app/stylesheets/_board.sass */
+.yui-board-settlement-1 {
+  background: url('/images/settlement-player-1.png?1344557890');
+}
+
+/* line 140, ../../../app/stylesheets/_board.sass */
+.yui-board-settlement-2 {
+  background: url('/images/settlement-player-2.png?1344557890');
+}
+
+/* line 142, ../../../app/stylesheets/_board.sass */
+.yui-board-settlement-3 {
+  background: url('/images/settlement-player-3.png?1344557890');
+}
+
+/* line 144, ../../../app/stylesheets/_board.sass */
+.yui-board-city-1 {
+  background: url('/images/city-player-1.png?1344557890');
+}
+
+/* line 146, ../../../app/stylesheets/_board.sass */
+.yui-board-city-2 {
+  background: url('/images/city-player-2.png?1344557890');
+}
+
+/* line 148, ../../../app/stylesheets/_board.sass */
+.yui-board-city-3 {
+  background: url('/images/city-player-3.png?1344557890');
+}
+
+/* line 151, ../../../app/stylesheets/_board.sass */
+.yui-board-edge {
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-0 {
+  position: absolute;
+  top: 0px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-1 {
+  position: absolute;
+  top: 80px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-2 {
+  position: absolute;
+  top: 160px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-3 {
+  position: absolute;
+  top: 240px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-4 {
+  position: absolute;
+  top: 320px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-5 {
+  position: absolute;
+  top: 400px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-6 {
+  position: absolute;
+  top: 480px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-7 {
+  position: absolute;
+  top: 560px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-8 {
+  position: absolute;
+  top: 640px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-9 {
+  position: absolute;
+  top: 720px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-10 {
+  position: absolute;
+  top: 800px;
+}
+
+/* line 158, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-row-11 {
+  position: absolute;
+  top: 880px;
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-0 {
+  left: -82px;
+  top: -44px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-0.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-0.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-0.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-1 {
+  left: -48px;
+  top: -64px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-1.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-1.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-1.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-2 {
+  left: -14px;
+  top: -44px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-2.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-2.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-2.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-3 {
+  left: -12px;
+  top: -4px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-3.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-3.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-3.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-4 {
+  left: 22px;
+  top: -24px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-4.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-4.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-4.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-5 {
+  left: 56px;
+  top: -4px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-5.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-5.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-5.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-6 {
+  left: 58px;
+  top: 36px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-6.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-6.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-6.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-7 {
+  left: 92px;
+  top: 16px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-7.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-7.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-7.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-8 {
+  left: 126px;
+  top: 36px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-8.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-8.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-8.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-9 {
+  left: 128px;
+  top: 76px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-9.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-9.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-9.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-10 {
+  left: 162px;
+  top: 56px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-10.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-10.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-10.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-11 {
+  left: 196px;
+  top: 76px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-11.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-11.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-11.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-12 {
+  left: 198px;
+  top: 116px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-12.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-12.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-12.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-13 {
+  left: 232px;
+  top: 96px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-13.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-13.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-13.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-14 {
+  left: 266px;
+  top: 116px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-14.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-14.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-14.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-15 {
+  left: 268px;
+  top: 156px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-15.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-15.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-15.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-16 {
+  left: 302px;
+  top: 136px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-16.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-16.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-16.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-17 {
+  left: 336px;
+  top: 156px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-17.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-17.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-17.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-18 {
+  left: 338px;
+  top: 196px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-18.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-18.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-18.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-19 {
+  left: 372px;
+  top: 176px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-19.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-19.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-19.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-20 {
+  left: 406px;
+  top: 196px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-20.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-20.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-20.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-21 {
+  left: 408px;
+  top: 236px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-21.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-21.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-21.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-22 {
+  left: 442px;
+  top: 216px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-22.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-22.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-22.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-23 {
+  left: 476px;
+  top: 236px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-23.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-23.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-23.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-24 {
+  left: 478px;
+  top: 276px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-24.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-24.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-24.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-25 {
+  left: 512px;
+  top: 256px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-25.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-25.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-25.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-26 {
+  left: 546px;
+  top: 276px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-26.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-26.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-26.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-27 {
+  left: 548px;
+  top: 316px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-27.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-27.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-27.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-28 {
+  left: 582px;
+  top: 296px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-28.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-28.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-28.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-29 {
+  left: 616px;
+  top: 316px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-29.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-29.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-29.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-30 {
+  left: 618px;
+  top: 356px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-30.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-30.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-30.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-31 {
+  left: 652px;
+  top: 336px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-31.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-31.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-31.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-32 {
+  left: 686px;
+  top: 356px;
+}
+/* line 186, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-32.yui-board-road-1 {
+  background: url('/images/road-2-player-1.png?1344557890');
+}
+/* line 188, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-32.yui-board-road-2 {
+  background: url('/images/road-2-player-2.png?1344557890');
+}
+/* line 190, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-32.yui-board-road-3 {
+  background: url('/images/road-2-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-33 {
+  left: 688px;
+  top: 396px;
+}
+/* line 167, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-33.yui-board-road-1 {
+  background: url('/images/road-0-player-1.png?1344557890');
+}
+/* line 169, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-33.yui-board-road-2 {
+  background: url('/images/road-0-player-2.png?1344557890');
+}
+/* line 171, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-33.yui-board-road-3 {
+  background: url('/images/road-0-player-3.png?1344557890');
+}
+
+/* line 163, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-34 {
+  left: 722px;
+  top: 376px;
+}
+/* line 177, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-34.yui-board-road-1 {
+  background: url('/images/road-1-player-1.png?1344557890');
+}
+/* line 179, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-34.yui-board-road-2 {
+  background: url('/images/road-1-player-2.png?1344557890');
+}
+/* line 181, ../../../app/stylesheets/_board.sass */
+.yui-board-edges-col-34.yui-board-road-3 {
+  background: url('/images/road-1-player-3.png?1344557890');
+}
+
+/*+message-block */
+/* line 28, ../../../app/stylesheets/screen.sass */
+.yui-discard-hidden {
+  display: none;
+}
+
+/* line 31, ../../../app/stylesheets/screen.sass */
+.yui-monopoly-hidden {
+  display: none;
+}
+
+/* line 34, ../../../app/stylesheets/screen.sass */
+.yui-year-of-plenty-hidden {
+  display: none;
+}
+
+/* line 37, ../../../app/stylesheets/screen.sass */
+.yui-before-roll-hidden {
+  display: none;
+}
+
+/* line 40, ../../../app/stylesheets/screen.sass */
+.yui-after-roll-hidden {
+  display: none;
+}
+
+/* line 43, ../../../app/stylesheets/screen.sass */
+.yui-cards-hidden {
+  display: none;
+}
+
+/* line 46, ../../../app/stylesheets/screen.sass */
+.yui-exchange-hidden {
+  display: none;
+}
+
+/* line 49, ../../../app/stylesheets/screen.sass */
+.yui-offer-hidden {
+  display: none;
+}
+
+/* line 52, ../../../app/stylesheets/screen.sass */
+.yui-offer-sent-hidden {
+  display: none;
+}
+
+/* line 55, ../../../app/stylesheets/screen.sass */
+.yui-offer-received-hidden {
+  display: none;
+}
+
+/* line 58, ../../../app/stylesheets/screen.sass */
+.yui-build-hidden {
+  display: none;
+}
+
+/* label */
+/*   :width 150px */
+/*   :display inline-block */

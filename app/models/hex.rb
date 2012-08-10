@@ -29,7 +29,7 @@ class Hex < ActiveRecord::Base
   validates_inclusion_of :hex_type, :in => ["hill", "field", "mountain", "pasture", "forest", "sea", "desert"]
   validates_presence_of :harbor_type, :if => :harbor_position
 
-  named_scope :roll, lambda { |roll| { :conditions => { :roll => roll } } }
+  scope :roll, lambda { |roll| { :conditions => { :roll => roll } } }
 
   RESOURCE_TYPES = { "hill" => "bricks", "field" => "grain", "mountain" => "ore", "pasture" => "wool", "forest" => "lumber" }
 

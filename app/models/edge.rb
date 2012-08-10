@@ -32,7 +32,7 @@ class Edge < ActiveRecord::Base
   delegate :players, :first_road?, :second_road?, :after_roll?, :road_built!, :to => :game, :prefix => true
   delegate :edges, :number, :to => :player, :prefix => true
 
-  before_validation_on_create :build_road
+  before_validation(:on => :create){build_road}
   validate :proximity_of_land, :position_of_development_road, :position_of_road
 
   attr_reader :user

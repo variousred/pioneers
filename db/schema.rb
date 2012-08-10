@@ -162,10 +162,10 @@ ActiveRecord::Schema.define(:version => 20090805111731) do
   end
 
   create_table "robberies", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "row"
     t.integer  "col"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "bricks"
     t.integer  "grain"
     t.integer  "lumber"

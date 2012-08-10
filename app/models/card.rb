@@ -25,8 +25,7 @@ class Card < ActiveRecord::Base
   validates_associated :player
   validate :player_not_changed
 
-  before_validation_on_create :buy_card
-
+  before_validation(:on => :create){buy_card}
   after_create :save_game, :card_bought
   after_save :save_player
 

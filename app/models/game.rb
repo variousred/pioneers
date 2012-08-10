@@ -42,7 +42,7 @@ class Game < ActiveRecord::Base
 
   before_update :sum_cards_count
   after_update :save_players, :end_game
-  before_validation_on_create :generate_board
+  before_validation(:on => :create){generate_board}
 
   attr_accessor :user
 

@@ -30,7 +30,7 @@ class Board < ActiveRecord::Base
   has_many :nodes, :dependent => :destroy
   has_many :edges, :dependent => :destroy
 
-  before_validation_on_create :build_hexes
+  before_validation(:on => :create){build_hexes}
 
   attr_accessor :hexes_attributes
 

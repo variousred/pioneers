@@ -1,6 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.2.8'
+gem 'compass'
+gem 'multi_json'
+gem 'json'
+gem 'state_machine'
+gem 'haml'
+gem 'authlogic'
+gem 'test-unit'
+gem 'jquery-rails', '>= 1.0.12'
+gem 'sass-rails', '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
+gem 'uglifier', '>= 1.0.3'
+gem 'acts_as_list'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

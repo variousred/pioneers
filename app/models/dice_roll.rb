@@ -46,7 +46,7 @@ class DiceRoll < ActiveRecord::Base
   protected
 
   def roll_dice
-    self.value = [1, 2, 3, 4, 5, 6].rand + [1, 2, 3, 4, 5, 6].rand
+    self.value = [1, 2, 3, 4, 5, 6].sample + [1, 2, 3, 4, 5, 6].sample
   end
 
   def set_turn

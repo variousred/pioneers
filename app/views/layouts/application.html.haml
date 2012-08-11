@@ -5,6 +5,10 @@
     = stylesheet_link_tag "compiled/screen.css", :media => "screen, projection"
   %body
     #container
+      %p.notice
+        = notice
+      %p.alert
+        = alert
       = message_block :class => "message-block"
       %div
         - if current_user

@@ -18,6 +18,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class Game < ActiveRecord::Base
+  include Generator
+
   has_many :players, :order => "number"
   has_many :dice_rolls, :order => "turn DESC"
   has_many :discards
@@ -263,6 +265,7 @@ class Game < ActiveRecord::Base
   end
 
   def generate_board
+
     hexes_attributes = Generator.generate
     robber_position = hexes_attributes.find { |hex_attributes| hex_attributes[:hex_type] == "desert" }[:position]
     build_board(:hexes_attributes => hexes_attributes, :size => [7, 7], :robber_position => robber_position)
@@ -371,7 +374,7 @@ class Game < ActiveRecord::Base
       [:road_building] * road_building_cards +
       [:victory_point] * victory_point_cards +
       [:year_of_plenty] * year_of_plenty_cards
-    card_type = cards.rand
+    card_type = cards.sample
     self["#{card_type}_cards"] -= 1 if card_type
     card_type
   end

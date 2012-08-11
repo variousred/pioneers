@@ -1,4 +1,6 @@
 Pioneers::Application.routes.draw do
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -58,18 +60,18 @@ Pioneers::Application.routes.draw do
   resource :user
   resource :user_session
   resources :messages
-  resources :games do |games|
-    games.resource :offer
-    games.resource :offer_response
-    games.resource :player
-    games.resources :cards
-    games.resources :dice_rolls
-    games.resources :discards
-    games.resources :edges
-    games.resources :exchanges
-    games.resources :hexes
-    games.resources :nodes
-    games.resources :robberies
+  resources :games do
+    resource :offer
+    resource :offer_response
+    resource :player
+    resources :cards
+    resources :dice_rolls
+    resources :discards
+    resources :edges
+    resources :exchanges
+    resources :hexes
+    resources :nodes
+    resources :robberies
   end
   root :to => 'games#index'
 end

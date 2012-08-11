@@ -65,7 +65,7 @@ module Generator
     10.times { lands.shuffle! }
 
     i = 0
-    harbor_distribution = [:odd?, :even?].rand
+    harbor_distribution = [:odd?, :even?].sample
 
     hexes_attributes.map do |hex_attributes|
       position = hex_attributes[:position]
@@ -79,7 +79,7 @@ module Generator
         result[:hex_type] = seas.shift
         if i.send(harbor_distribution)
           result[:harbor_type] = harbors.shift
-          result[:harbor_position] = harbor.rand
+          result[:harbor_position] = harbor.sample
         end
       else type == :land
         result[:hex_type] = lands.shift

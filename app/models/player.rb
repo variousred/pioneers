@@ -65,7 +65,7 @@ class Player < ActiveRecord::Base
      [:lumber] * lumber +
      [:ore] * ore +
      [:grain] * grain +
-     [:wool] * wool).rand
+     [:wool] * wool).sample
   end
 
   def rob_resource

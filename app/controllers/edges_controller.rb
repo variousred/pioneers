@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class EdgesController < ApplicationController
-  before_filter :require_user, :fetch_game
+  before_filter :authenticate_user!, :fetch_game
 
   def create
     @edge = @game.board_edges.build(params[:edge])

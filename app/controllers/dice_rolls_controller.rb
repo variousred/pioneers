@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class DiceRollsController < ApplicationController
-  before_filter :require_user, :fetch_game
+  before_filter :authenticate_user!, :fetch_game
 
   def create
     @dice_roll = @game.dice_rolls.build(params[:dice_roll])

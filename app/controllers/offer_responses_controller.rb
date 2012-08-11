@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class OfferResponsesController < ApplicationController
-  before_filter :require_user, :fetch_game
+  before_filter :authenticate_user!, :fetch_game
 
   def create
     @offer_response = @game.offer.offer_responses.build(params[:offer_response])

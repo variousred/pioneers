@@ -63,7 +63,11 @@ Pioneers::Application.routes.draw do
   resources :games do
     resource :offer
     resource :offer_response
-    resource :player
+    resource :player do
+      member do
+        get 'create'
+      end
+    end
     resources :cards
     resources :dice_rolls
     resources :discards

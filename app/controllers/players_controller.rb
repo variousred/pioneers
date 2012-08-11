@@ -18,15 +18,15 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class PlayersController < ApplicationController
-  before_filter :require_user, :fetch_game
+  before_filter :authenticate_user!, :fetch_game
 
   def create
     @player = @game.players.build
-    @player.user = @current_user
+    @player.user = current_user
     if @player.save
       flash[:success] = "Successfully joined"
     else
-      flash[:error] = "Could not join"
+      flash[:error] = "Could not join #{@player.errors.each {|error| error.inspect.html_safe}}".html_safe
     end
     redirect_to game_path(@game)
   end

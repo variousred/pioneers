@@ -60,8 +60,8 @@ module MessageBlockHelper
     flash_messages[options[:model_error_type].to_sym] += model_errors
 
     contents = flash_messages.keys.select {|type| !flash_messages[type.to_sym].empty? }.map do |type|
-      content_tag(:ul, flash_messages[type.to_sym].map {|message| content_tag(:li, message) }.join, :class => type)
-    end.join
+      content_tag(:ul, flash_messages[type.to_sym].map {|message| content_tag(:li, message)}.join.html_safe, :class => type)
+    end.join.html_safe
 
     if options[:container]
       content_tag(options[:container], contents, options[:html])

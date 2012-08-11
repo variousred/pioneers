@@ -3,17 +3,19 @@
   %head
     %title Settlers of Satan
     = stylesheet_link_tag "compiled/screen.css", :media => "screen, projection"
+    = javascript_include_tag "application"
   %body
     #container
       %p.notice
         = notice
       %p.alert
         = alert
-      = message_block :class => "message-block"
+      = message_block(:class => "message-block").html_safe
       %div
         - if current_user
           Logged in as
-          = current_user.login
+          = current_user.email
+          = current_user.id
           ,
           = link_to "Logout", user_session_path, :method => :delete
         - else
@@ -21,4 +23,4 @@
           = link_to "Sign up", new_user_path
       #page
         = yield
-    = sprockets_include_tag
+    -#= sprockets_include_tag

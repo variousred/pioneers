@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811020946) do
+ActiveRecord::Schema.define(:version => 20120811024202) do
 
   create_table "boards", :force => true do |t|
     t.integer "game_id"
@@ -31,8 +30,8 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
     t.integer  "lumber"
     t.integer  "ore"
     t.integer  "wool"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "resource_type"
   end
 
@@ -40,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
     t.integer  "game_id"
     t.integer  "value"
     t.integer  "turn"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "player_id"
   end
 
@@ -53,8 +52,8 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
     t.integer  "ore"
     t.integer  "player_id"
     t.integer  "game_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "edges", :force => true do |t|
@@ -72,14 +71,14 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
     t.integer  "ore"
     t.integer  "wool"
     t.integer  "lumber"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "games", :force => true do |t|
     t.string   "state"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "current_turn"
     t.string   "phase"
     t.integer  "current_discard_resource_limit"
@@ -120,8 +119,8 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
     t.integer  "player_id"
     t.integer  "offer_id"
     t.boolean  "agreed"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "offers", :force => true do |t|
@@ -134,8 +133,8 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
     t.integer  "recipient_id"
     t.integer  "game_id"
     t.string   "state"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "players", :force => true do |t|
@@ -166,8 +165,8 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
   create_table "robberies", :force => true do |t|
     t.integer  "row"
     t.integer  "col"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "bricks"
     t.integer  "grain"
     t.integer  "lumber"
@@ -179,18 +178,6 @@ ActiveRecord::Schema.define(:version => 20120811020946) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login"
-    t.string   "crypted_password"
-    t.string   "password_salt"
-    t.string   "persistence_token"
-    t.integer  "login_count"
-    t.datetime "last_request_at"
-    t.datetime "last_login_at"
-    t.datetime "current_login_at"
-    t.string   "last_login_ip"
-    t.string   "current_login_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"

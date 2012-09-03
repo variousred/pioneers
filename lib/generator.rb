@@ -81,7 +81,7 @@ module Generator
           result[:harbor_type] = harbors.shift
           result[:harbor_position] = harbor.sample
         end
-      else type == :land
+      elsif type == :land
         result[:hex_type] = lands.shift
         result[:roll] = rolls.shift unless result[:hex_type] == "desert"
       end

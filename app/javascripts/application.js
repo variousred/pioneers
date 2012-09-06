@@ -1,25 +1,3 @@
-//= require <lib/yui/yui>
-//= require <lib/oop/oop>
-//= require <lib/event-custom/event-custom>
-//= require <lib/io/io-base>
-//= require <lib/json/json-parse>
-//= require <lib/attribute/attribute>
-//= require <lib/event/event-base>
-//= require <lib/pluginhost/pluginhost>
-//= require <lib/dom/dom>
-//= require <lib/node/node>
-//= require <lib/event/event-delegate>
-//= require <lib/event/event-focus>
-//= require <lib/base/base>
-//= require <lib/classnamemanager/classnamemanager>
-//= require <lib/widget/widget>
-//= require <lib/collection/collection>
-//= require <lib/widget/widget-position>
-//= require <lib/widget/widget-position-ext>
-//= require <lib/widget/widget-stack>
-//= require <lib/widget/widget-stdmod>
-//= require <lib/overlay/overlay>
-
 //= require <pioneers/board>
 //= require <pioneers/edge>
 //= require <pioneers/game>
@@ -48,6 +26,8 @@
 //= require <widgets/resources>
 //= require <widgets/user-player>
 //= require <widgets/year-of-plenty>
+
+<script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
 
 YUI().use("io-base", "json-parse", "game", "overlay", function(Y) {
     var parse = Y.JSON.parse,

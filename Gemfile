@@ -22,6 +22,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'therubyracer'
 
+gem 'yui-rails'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

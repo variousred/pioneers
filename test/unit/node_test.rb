@@ -21,7 +21,7 @@ require 'test_helper'
 
 class NodeTest < Test::Unit::TestCase
   context "With position [3, 10]" do
-    setup { @node = Factory.build(:node, :position => [3, 10]) }
+    setup { @node = FactoryGirl.build(:node, :position => [3, 10]) }
 
     should "return correct hex positions" do
       assert_equal [[2, 5], [2, 4], [3, 4]], @node.hex_positions
@@ -54,7 +54,7 @@ class NodeTest < Test::Unit::TestCase
 
   context "validations" do
     setup do
-      @node = Factory.build(:node)
+      @node = FactoryGirl.build(:node)
       @hex = Object.new
       stub(@hex).settleable? { true }
       stub(@hex).harbor_on? { false }

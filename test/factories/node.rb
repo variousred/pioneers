@@ -17,9 +17,11 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Factory.define :node do |n|
+FactoryGirl.define do
+  factory :node do |n|
   n.state_event "settle"
   n.association :board, :factory => :board
   n.association :player, :factory => :player
   n.position [0, 0]
+end
 end

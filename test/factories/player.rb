@@ -17,7 +17,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Factory.define :player do |p|
+FactoryGirl.define do
+  factory :player do |p|
   p.bricks 0
   p.bricks_exchange_rate 4
   p.grain 0
@@ -35,4 +36,5 @@ Factory.define :player do |p|
   p.visible_points 0
   p.hidden_points 0
   p.association :user, :factory => :user
+end
 end

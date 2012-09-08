@@ -33,6 +33,17 @@ gem 'state_machine'
 
 gem 'haml'
 
+gem 'acts_as_list'
+
+gem 'authlogic'
+
+gem 'memoist'
+
+group :test do
+  gem 'shoulda-context'
+  gem 'factory_girl_rails'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

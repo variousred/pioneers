@@ -17,7 +17,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Factory.define :board do |b|
+FactoryGirl.define do
+  factory :board do |b|
   b.size [7, 7]
   b.robber_position [2, 4]
   b.hexes_attributes [{ :position => [0, 3], :hex_type => "sea" },
@@ -57,4 +58,5 @@ Factory.define :board do |b|
                       { :position => [6, 1], :hex_type => "sea", :harbor_type => "grain", :harbor_position => 0 },
                       { :position => [6, 2], :hex_type => "sea" },
                       { :position => [6, 3], :hex_type => "sea", :harbor_type => "generic", :harbor_position => 1 }]
+end
 end

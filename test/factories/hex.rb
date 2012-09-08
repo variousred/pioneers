@@ -17,8 +17,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Factory.define :hex do |h|
+FactoryGirl.define do
+  factory :hex do |h|
   h.position [0, 0]
   h.hex_type "forest"
   h.roll 2
+end
 end

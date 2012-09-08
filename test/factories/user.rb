@@ -17,8 +17,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Factory.define :user do |u|
+FactoryGirl.define do
+  factory :user do |u|
   u.sequence(:login) { |n| "login#{n}" }
   u.password "secret"
   u.password_confirmation "secret"
+end
 end

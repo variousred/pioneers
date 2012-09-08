@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class Board < ActiveRecord::Base
-  extend ActiveSupport::Memoizable
+  extend Memoist
 
   belongs_to :game
 

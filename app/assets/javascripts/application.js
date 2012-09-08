@@ -30,7 +30,6 @@
 //= require widgets/user-player
 //= require widgets/year-of-plenty
 
-<script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
 
 YUI().use("io-base", "json-parse", "game", "overlay", function(Y) {
     var parse = Y.JSON.parse,

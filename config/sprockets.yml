@@ -1,4 +1,4 @@
-:asset_root: public
+:asset_root: assets
 :load_path:
   - app/javascripts
 :source_files:

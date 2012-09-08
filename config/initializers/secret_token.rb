@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Pioneers::Application.config.secret_token = '3020ea374eafb5e5bf67c5d68ceb238419dd346e13ce525b706cb17cbaf59b2062b9f13f7309f0427fd943e4e9830c7bf38d849f74ae200bef001b95b5038a57'
+Pioneers::Application.config.secret_token = '3971d375991a2ba9e8100318ef7486ab28383d4607e58b86013f408c22c69918dbef9791726d3ddbd97594af29f80353a2de66ca733f4a474862eaf85e6aee0b'

@@ -31,6 +31,7 @@ YUI.add("join", function(Y) {
         FORM_TEMPLATE = '<form method="post"></form>',
         METHOD_TEMPLATE = '<input type="hidden" name="_method"></input>',
         SUBMIT_TEMPLATE = '<input type="submit"></input>',
+        AUTHENTICATION_TEMPLATE = '<input type="hidden" name="authenticity_token" value="' + $("#csrf_token").attr("value") + '">'
         Widget = Y.Widget,
         Node = Y.Node,
         isValue = Y.Lang.isValue,
@@ -84,8 +85,8 @@ YUI.add("join", function(Y) {
                 player = game.userPlayer(),
                 state = isValue(player) ? player.get("state") : undefined;
 
-            this.joinNode.query("input").set("disabled", isValue(player));
-            this.quitNode.query("input").set("disabled", !isValue(player));
+            this.joinNode.one("input").set("disabled", isValue(player));
+            this.quitNode.one("input").set("disabled", !isValue(player));
             this.startNode.set("disabled", state === "ready");
         },
 
@@ -118,7 +119,8 @@ YUI.add("join", function(Y) {
         _createForm: function(method, action, text, className) {
             var form = Y.Node.create(FORM_TEMPLATE),
                 submit = Y.Node.create(SUBMIT_TEMPLATE),
-                input = Y.Node.create(METHOD_TEMPLATE);
+                input = Y.Node.create(METHOD_TEMPLATE),
+                authentication = Y.Node.create(AUTHENTICATION_TEMPLATE);
 
 
             submit.set("value", text);
@@ -127,6 +129,7 @@ YUI.add("join", function(Y) {
 
             form.set("action", action);
             form.appendChild(submit);
+            form.appendChild(authentication)
 
             if(method !== "post") {
                 input.set("value", method);

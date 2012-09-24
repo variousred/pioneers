@@ -22,7 +22,7 @@ class EdgesController < ApplicationController
 
   def create
     @edge = @game.board_edges.build(params[:edge])
-    @edge.user = @current_user
+    @edge.user = current_user
     if @edge.save
       redirect_to game_path(@game, :format => :json)
     else

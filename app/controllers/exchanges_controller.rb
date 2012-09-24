@@ -22,7 +22,7 @@ class ExchangesController < ApplicationController
 
   def create
     @exchange = @game.exchanges.build(params[:exchange])
-    @exchange.user = @current_user
+    @exchange.user = current_user
     if @exchange.save
       redirect_to game_path(@game, :format => :json)
     else

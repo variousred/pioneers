@@ -21,7 +21,7 @@ require 'test_helper'
 
 class EdgeTest < Test::Unit::TestCase
   context "With position [3, 15]" do
-    setup { @edge = Factory.build(:edge, :position => [3, 15]) }
+    setup { @edge = FactoryGirl.build(:edge, :position => [3, 15]) }
 
     should "return correct hex positions" do
       assert_equal [[3, 4], [3, 3]], @edge.hex_positions
@@ -53,7 +53,7 @@ class EdgeTest < Test::Unit::TestCase
   end
 
   context "With position [6, 13]" do
-    setup { @edge = Factory.build(:edge, :position => [6, 13]) }
+    setup { @edge = FactoryGirl.build(:edge, :position => [6, 13]) }
 
     should "return correct hex positions" do
       assert_equal [[5, 3], [6, 3]], @edge.hex_positions
@@ -85,7 +85,7 @@ class EdgeTest < Test::Unit::TestCase
   end
 
   context "With position [1, 20]" do
-    setup { @edge = Factory.build(:edge, :position => [1, 20]) }
+    setup { @edge = FactoryGirl.build(:edge, :position => [1, 20]) }
 
     should "return correct hex positions" do
       assert_equal [[0, 6], [1, 5]], @edge.hex_positions
@@ -118,20 +118,20 @@ class EdgeTest < Test::Unit::TestCase
 
   context "in first road phase" do
     setup do
-      @edge = Factory.build(:edge)
+      @edge = FactoryGirl.build(:edge)
       @hex = Object.new
-      stub(@hex).settleable? { true }
-      stub(@edge).hexes { [@hex] }
-      stub(@edge).game_first_road? { true }
-      stub(@edge).game_second_road? { false }
-      stub(@edge).game_after_roll? { false }
-      stub(@edge).user { @edge.player.user }
+      @hex.stubs(:settleable?).returns true
+      @edge.stubs(:hexes).returns [@hex]
+      stub!(@edge).game_first_road? { true }
+      stub!(@edge).game_second_road? { false }
+      stub!(@edge).game_after_roll? { false }
+      stub!(@edge).user { @edge.player.user }
       @node = Object.new
-      stub(@node)
-      stub(@node).player { @edge.player }
-      stub(@node).has_road? { false }
-      stub(@edge).nodes { [@node] }
-      stub(@edge).game_road_built! { |user| true }
+      stub!(@node)
+      stub!(@node).player { @edge.player }
+      stub!(@node).has_road? { false }
+      stub!(@edge).nodes { [@node] }
+      stub!(@edge).game_road_built! { |user| true }
     end
 
     should "be valid with valid attributes" do
@@ -139,22 +139,22 @@ class EdgeTest < Test::Unit::TestCase
     end
 
     should "not be valid if position is not settleable" do
-      stub(@hex).settleable? { false }
+      stub!(@hex).settleable? { false }
       assert_false @edge.valid?
     end
 
     should "not be valid if neighbour settlement doesn't belong to player" do
-      stub(@node).player { Factory.build(:player) }
+      stub!(@node).player { FactoryGirl.build(:player) }
       assert_false @edge.valid?
     end
 
     should "not be valid if neighbour settlement has road already" do
-      stub(@node).has_road? { true }
+      stub!(@node).has_road? { true }
       assert_false @edge.valid?
     end
 
     should "not be valid if no settlements in neighbourhood" do
-      stub(@edge).nodes { [] }
+      stub!(@edge).nodes { [] }
       assert_false @edge.valid?
     end
 
@@ -172,24 +172,24 @@ class EdgeTest < Test::Unit::TestCase
 
   context "in after roll phase" do
     setup do
-      @edge = Factory.build(:edge)
+      @edge = FactoryGirl.build(:edge)
       @edge.player.attributes = { :bricks => 1, :lumber => 1 }
       @edge.player.save!
       @hex = Object.new
-      stub(@hex).settleable? { true }
-      stub(@edge).hexes { [@hex] }
-      stub(@edge).game_first_road? { false }
-      stub(@edge).game_second_road? { false }
-      stub(@edge).game_after_roll? { true }
-      stub(@edge).user { @edge.player.user }
-      stub(@edge).game_road_built!
+      @hex.stubs(:settleable?).returns true
+      stub!(@edge).hexes { [@hex] }
+      stub!(@edge).game_first_road? { false }
+      stub!(@edge).game_second_road? { false }
+      stub!(@edge).game_after_roll? { true }
+      stub!(@edge).user { @edge.player.user }
+      stub!(@edge).game_road_built!
     end
 
     context "with settlement in neighbourhood" do
       setup do
         @node = Object.new
-        stub(@node).player { @edge.player }
-        stub(@edge).nodes { [@node] }
+        stub!(@node).player { @edge.player }
+        stub!(@edge).nodes { [@node] }
       end
 
       should "be valid with valid attributes" do
@@ -215,7 +215,7 @@ class EdgeTest < Test::Unit::TestCase
       end
 
       should "not be valid if settlement doesn't belong to player" do
-        stub(@node).player { Factory.build(:player) }
+        stub!(@node).player { Factory.build(:player) }
         assert_false @edge.valid?
       end
     end
@@ -223,8 +223,8 @@ class EdgeTest < Test::Unit::TestCase
     context "with road in left neighbourhood" do
       setup do
         @edge2 = Object.new
-        stub(@edge2).player { @edge.player }
-        stub(@edge).left_edges { [@edge2] }
+        stub!(@edge2).player { @edge.player }
+        stub!(@edge).left_edges { [@edge2] }
       end
 
       should "be valid with valid attributes" do
@@ -232,14 +232,14 @@ class EdgeTest < Test::Unit::TestCase
       end
 
       should "not be valid if road doesn't belong to player" do
-        stub(@edge2).player { Factory.build(:player) }
+        stub!(@edge2).player { FactoryGirl.build(:player) }
         assert_false @edge.valid?
       end
 
       should "not be valid if left road belong to player but left settlement doesn't" do
         @node = Object.new
-        stub(@node).player { Factory.build(:player) }
-        stub(@edge).left_node { @node }
+        stub!(@node).player { FactoryGirl.build(:player) }
+        stub!(@edge).left_node { @node }
         assert_false @edge.valid?
       end
     end

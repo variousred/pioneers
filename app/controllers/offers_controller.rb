@@ -22,7 +22,7 @@ class OffersController < ApplicationController
 
   def create
     @offer = @game.offers.build(params[:offer])
-    @offer.user = @current_user
+    @offer.user = current_user
     if @offer.save
       redirect_to game_path(@game, :format => :json)
     else
@@ -32,7 +32,7 @@ class OffersController < ApplicationController
 
   def update
     @offer = @game.offer
-    @offer.user = @current_user
+    @offer.user = current_user
     if @offer.update_attributes(params[:offer])
       redirect_to game_path(@game, :format => :json)
     else

@@ -106,7 +106,7 @@ YUI.add("cards", function(Y) {
                 cards = this.get("cards"),
                 cardsClassName = this.getClassName(CARD);
 
-            contentBox.queryAll("." + cardsClassName).remove();
+            contentBox.all("." + cardsClassName).remove();
 
             Y.each(cards, function(card) {
                 this._renderButton(card);

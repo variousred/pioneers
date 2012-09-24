@@ -369,9 +369,9 @@ YUI.add("board", function(Y) {
 
         bindUI: function() {
             var contentBox = this.get(CONTENT_BOX),
-                hexNodes = contentBox.queryAll("." + C_HEX),
-                nodeNodes = contentBox.queryAll("." + C_NODE),
-                edgeNodes = contentBox.queryAll("." + C_EDGE);
+                hexNodes = contentBox.all("." + C_HEX),
+                nodeNodes = contentBox.all("." + C_NODE),
+                edgeNodes = contentBox.all("." + C_EDGE);
 
             hexNodes.on("mouseover", bind(this._hexesMouseOver, this));
             hexNodes.on("mouseout", bind(this._hexesMouseOut, this));

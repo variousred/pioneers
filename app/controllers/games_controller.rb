@@ -41,7 +41,7 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    @game.user = @current_user
+    @game.user = current_user
     if @game.end_turn
       redirect_to game_path(@game, :format => :json)
     else

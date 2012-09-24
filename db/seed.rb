@@ -1,3 +1,3 @@
-User.create!(:login => "alice", :password => "secret", :password_confirmation => "secret")
-User.create!(:login => "bob", :password => "secret", :password_confirmation => "secret")
-User.create!(:login => "darth", :password => "secret", :password_confirmation => "secret")
+User.create!(:email => "alice@example.com", :password => "secret", :password_confirmation => "secret")
+User.create!(:email => "bob@example.com", :password => "secret", :password_confirmation => "secret")
+User.create!(:email => "darth@example.com", :password => "secret", :password_confirmation => "secret")

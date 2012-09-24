@@ -654,7 +654,9 @@ YUI.add("game", function(Y) {
                 configuration = {};
 
             params = params || [];
-
+            
+            configuration.headers = {'X-CSRF-Token': $('#csrf_token').attr("value")};
+            
             if(method !== "get") {
                 configuration.method = "post";
                 if(method !== "post") {

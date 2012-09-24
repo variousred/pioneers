@@ -22,7 +22,7 @@ class NodesController < ApplicationController
 
   def create
     @node = @game.board_nodes.build(params[:node])
-    @node.user = @current_user
+    @node.user = current_user
     if @node.save
       redirect_to game_path(@game, :format => :json)
     else
@@ -32,7 +32,7 @@ class NodesController < ApplicationController
 
   def update
     @node = @game.board_nodes.find_by_position(params[:id].split(","))
-    @node.user = @current_user
+    @node.user = current_user
     @node.attributes = params[:node]
     if @node.expand
       redirect_to game_path(@game, :format => :json)

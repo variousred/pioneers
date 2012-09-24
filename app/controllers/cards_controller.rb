@@ -22,7 +22,7 @@ class CardsController < ApplicationController
 
   def create
     @card = @game.cards.build(params[:card])
-    @card.user = @current_user
+    @card.user = current_user
     if @card.save
       redirect_to game_path(@game, :format => :json)
     else
@@ -33,7 +33,7 @@ class CardsController < ApplicationController
   def update
     @card = @game.cards.find(params[:id])
     @card.attributes = params[:card]
-    @card.user = @current_user
+    @card.user = current_user
     if @card.update_attributes(params[:card])
       redirect_to game_path(@game, :format => :json)
     else

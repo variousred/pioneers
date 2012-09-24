@@ -93,7 +93,7 @@ YUI.add("monopoly", function(Y) {
 
         _uiSyncButtons: function(card) {
             var contentBox = this.get(CONTENT_BOX);
-            contentBox.queryAll("button").set("disabled", card === null);
+            contentBox.all("button").set("disabled", card === null);
         },
 
         _renderButtons: function() {

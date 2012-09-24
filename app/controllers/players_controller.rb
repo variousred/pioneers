@@ -32,7 +32,7 @@ class PlayersController < ApplicationController
   end
 
   def update
-    @player = @game.players.find_by_user_id(@current_user.id)
+    @player = @game.players.find_by_user_id(current_user.id)
     if @player.update_attributes(params[:player])
       flash[:success] = "Successfully updated"
     else
@@ -42,7 +42,7 @@ class PlayersController < ApplicationController
   end
 
   def destroy
-    @player = @game.players.find_by_user_id(@current_user.id)
+    @player = @game.players.find_by_user_id(current_user.id)
     if @player.destroy
       flash[:success] = "Successfully destroyed"
     else

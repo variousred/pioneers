@@ -27,7 +27,7 @@ class Player < ActiveRecord::Base
 
   acts_as_list :scope => :game, :column => "number"
   validates_uniqueness_of :user_id, :scope => [:game_id]
-  delegate :login, :idle?, :to => :user, :prefix => true
+  delegate :email, :idle?, :to => :user, :prefix => true
   delegate :start_game, :preparing?, :current_player, :to => :game,
            :prefix => true
 

@@ -22,7 +22,7 @@ class RobberiesController < ApplicationController
 
   def create
     @robbery = @game.robberies.build(params[:robbery])
-    @robbery.user = @current_user
+    @robbery.user = current_user
     if @robbery.save
       redirect_to game_path(@game, :format => :json)
     else

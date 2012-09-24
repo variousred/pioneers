@@ -2,11 +2,13 @@
 %html{html_attrs}
   %head
     %title Settlers of Catan
-    <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+    <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui.js"></script>
     = stylesheet_link_tag "gamescreen", :media => "screen, projection"
     = javascript_include_tag "application"
 
   %body
+    = tag(:input, {:id =>"csrf_token", :type => "hidden", :name => "authenticity_token",
+                :value => "#{form_authenticity_token}"})
     #container
       %p.notice
         = notice

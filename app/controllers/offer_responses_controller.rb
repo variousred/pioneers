@@ -22,7 +22,7 @@ class OfferResponsesController < ApplicationController
 
   def create
     @offer_response = @game.offer.offer_responses.build(params[:offer_response])
-    @offer_response.user = @current_user
+    @offer_response.user = current_user
     if @offer_response.save!
       redirect_to game_path(@game, :format => :json)
     else

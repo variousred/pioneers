@@ -22,7 +22,7 @@ class DiceRollsController < ApplicationController
 
   def create
     @dice_roll = @game.dice_rolls.build(params[:dice_roll])
-    @dice_roll.user = @current_user
+    @dice_roll.user = current_user
     if @dice_roll.save
       redirect_to game_path(@game, :format => :json)
     else

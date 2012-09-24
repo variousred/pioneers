@@ -22,7 +22,7 @@ class DiscardsController < ApplicationController
 
   def create
     @discard = @game.discards.build(params[:discard])
-    @discard.user = @current_user
+    @discard.user = current_user
     if @discard.save
       redirect_to game_path(@game, :format => :json)
     else

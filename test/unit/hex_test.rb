@@ -19,9 +19,9 @@
 
 require 'test_helper'
 
-class HexTest < Test::Unit::TestCase
+class HexTest < ActiveSupport::TestCase
   context "Validations" do
-    setup { @hex = FactoryGirl.build(:hex, :position => [0, 0]) }
+    setup { @hex = build(:hex, :position => [0, 0]) }
 
     should "not be valid with harbor position, without harbor type" do
       @hex.harbor_position = 0
@@ -31,7 +31,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With position [0, 0]" do
-    setup { @hex = FactoryGirl.build(:hex, :position => [0, 0]) }
+    setup { @hex = build(:hex, :position => [0, 0]) }
 
     should "return correct node positions" do
       assert_equal [[0, 3], [0, 2], [0, 1], [1, 0], [1, 1], [1, 2]], @hex.node_positions
@@ -47,7 +47,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With position [6, 3]" do
-    setup { @hex = FactoryGirl.build(:hex, :position => [6, 3]) }
+    setup { @hex = build(:hex, :position => [6, 3]) }
 
     should "return correct node positions" do
       assert_equal [[6, 9], [6, 8], [6, 7], [7, 6], [7, 7], [7, 8]], @hex.node_positions
@@ -63,7 +63,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With position [3, 4]" do
-    setup { @hex = FactoryGirl.build(:hex, :position => [3, 4]) }
+    setup { @hex = build(:hex, :position => [3, 4]) }
 
     should "return correct node positions" do
       assert_equal [[3, 11], [3, 10], [3, 9], [4, 8], [4, 9], [4, 10]], @hex.node_positions
@@ -79,7 +79,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of hill" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "hill") }
+    setup { @hex = build(:hex, :hex_type => "hill") }
 
     should "return bricks resource type" do
       assert_equal "bricks", @hex.resource_type
@@ -91,7 +91,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of field" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "field") }
+    setup { @hex = build(:hex, :hex_type => "field") }
 
     should "return bricks resource type" do
       assert_equal "grain", @hex.resource_type
@@ -103,7 +103,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of mountain" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "mountain") }
+    setup { @hex = build(:hex, :hex_type => "mountain") }
 
     should "return bricks resource type" do
       assert_equal "ore", @hex.resource_type
@@ -115,7 +115,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of pasture" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "pasture") }
+    setup { @hex = build(:hex, :hex_type => "pasture") }
 
     should "return wool resource type" do
       assert_equal "wool", @hex.resource_type
@@ -127,7 +127,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of forest" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "forest") }
+    setup { @hex = build(:hex, :hex_type => "forest") }
 
     should "return lumber resource type" do
       assert_equal "lumber", @hex.resource_type
@@ -139,7 +139,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of desert" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "desert") }
+    setup { @hex = build(:hex, :hex_type => "desert") }
 
     should "return lumber resource type" do
       assert_nil @hex.resource_type
@@ -151,7 +151,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With hex type of sea" do
-    setup { @hex = FactoryGirl.build(:hex, :hex_type => "sea") }
+    setup { @hex = build(:hex, :hex_type => "sea") }
 
     should "return lumber resource type" do
       assert_nil @hex.resource_type
@@ -163,7 +163,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With harbor on position 0" do
-    setup { @hex = FactoryGirl.build(:hex, :position => [1, 1], :harbor_position => 0) }
+    setup { @hex = build(:hex, :position => [1, 1], :harbor_position => 0) }
 
     should "have harbor" do
       assert @hex.harbor?
@@ -179,7 +179,7 @@ class HexTest < Test::Unit::TestCase
   end
 
   context "With harbor on position 5" do
-    setup { @hex = FactoryGirl.build(:hex, :position => [1, 1], :harbor_position => 5) }
+    setup { @hex = build(:hex, :position => [1, 1], :harbor_position => 5) }
 
     should "have harbor" do
       assert @hex.harbor?
@@ -196,21 +196,21 @@ class HexTest < Test::Unit::TestCase
 
   context "with neighbour node" do
     setup do
-      @hex = FactoryGirl.build(:hex, :hex_type => "forest")
+      @hex = build(:hex, :hex_type => "forest")
       @node = Object.new
-      @node.stubs(:player).returns(FactoryGirl(:player))
+      @node.stubs(:player).returns(create(:player))
       @hex.stubs(:nodes).returns([@node])
     end
 
     should "add resources to neighbour nodes without robber when rolled" do
       @hex.stubs(:robber?).returns(false)
-#      mock(@node).add_resources("lumber") { |type| true }
+      @node.expects(:add_resources).with("lumber")
       @hex.rolled
     end
 
     should "not add resources to neighbour nodes with robber when rolled" do
       @hex.stubs(:robber?).returns(true)
-      dont_allow(@node).add_resources
+      @node.expects(:add_resources).never
       @hex.rolled
     end
   end

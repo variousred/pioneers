@@ -42,6 +42,7 @@ gem 'memoist'
 group :test do
   gem 'shoulda-context'
   gem 'factory_girl_rails'
+  gem 'mocha', :require => false
 end
 
 group :development do
